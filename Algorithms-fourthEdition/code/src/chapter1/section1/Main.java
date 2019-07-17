@@ -15,7 +15,6 @@ public class Main {
         }
 
         System.out.println(binarySearch(5, arr, 0, 10));
-
     }
 
     /**
