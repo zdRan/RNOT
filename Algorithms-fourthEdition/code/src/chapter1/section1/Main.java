@@ -1,5 +1,7 @@
 package chapter1.section1;
 
+import edu.princeton.cs.algs4.StdOut;
+
 /**
  * Create by ranzd on 2019/7/17
  *
@@ -7,14 +9,8 @@ package chapter1.section1;
  */
 public class Main {
     public static void main(String[] args) {
-        //System.out.println(gcd(10, 5));
-        int[] arr = new int[10];
-
-        for (int i = 0; i < 10; i++) {
-            arr[i] = i + 1;
-        }
-
-        System.out.println(BinarySearch.binarySearch(5, arr));
+        compareXY(0.000001,1.00000001);
+        func();
     }
 
     /**
@@ -28,4 +24,21 @@ public class Main {
         return q == 0 ? p : gcd(q, p % q);
     }
 
+    private static void compareXY(double x, double y) {
+        if ((0 < x && x < 1) && (0 < y && y < 1)) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+    }
+
+    private static void func(){
+        int f = 0;
+        int g = 1;
+        for (int i = 0; i <= 15; i++) {
+            StdOut.println(f);
+            f = f + g;
+            g = f - g;
+        }
+    }
 }
