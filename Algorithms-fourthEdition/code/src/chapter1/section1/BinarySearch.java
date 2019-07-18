@@ -34,6 +34,15 @@ public class BinarySearch {
         return mid;
     }
 
+    /**
+     * 二分查找 非递归版
+     *
+     * @param key
+     * @param arr
+     * @param lo
+     * @param hi
+     * @return
+     */
     private static int rankByWhile(int key, int[] arr, int lo, int hi) {
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
